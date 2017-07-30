@@ -1,0 +1,69 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/01/Or16.hdl
+
+/**
+ * 16-bit bitwise Or:
+ * for i = 0..15 out[i] = (a[i] or b[i])
+ */
+
+CHIP Or16 {
+    IN a[16], b[16];
+    OUT out[16];
+
+    PARTS:
+    //Manipulating the fact that two not entries before
+    //a Nand gate will imitate an Or gate will give us
+    //our desired answer for 16 inputs
+
+    Not(in=a[0], out=c00);
+    Not(in=b[0], out=d00);
+    Nand(a=c00, b=d00, out=out[0]);
+    Not(in=a[1], out=c01);
+    Not(in=b[1], out=d01);
+    Nand(a=c01, b=d01, out=out[1]);
+    Not(in=a[2], out=c02);
+    Not(in=b[2], out=d02);
+    Nand(a=c02, b=d02, out=out[2]);
+    Not(in=a[3], out=c03);
+    Not(in=b[3], out=d03);
+    Nand(a=c03, b=d03, out=out[3]);
+    Not(in=a[4], out=c04);
+    Not(in=b[4], out=d04);
+    Nand(a=c04, b=d04, out=out[4]);
+    Not(in=a[5], out=c05);
+    Not(in=b[5], out=d05);
+    Nand(a=c05, b=d05, out=out[5]);
+    Not(in=a[6], out=c06);
+    Not(in=b[6], out=d06);
+    Nand(a=c06, b=d06, out=out[6]);
+    Not(in=a[7], out=c07);
+    Not(in=b[7], out=d07);
+    Nand(a=c07, b=d07, out=out[7]);
+    Not(in=a[8], out=c08);
+    Not(in=b[8], out=d08);
+    Nand(a=c08, b=d08, out=out[8]);
+    Not(in=a[9], out=c09);
+    Not(in=b[9], out=d09);
+    Nand(a=c09, b=d09, out=out[9]);
+    Not(in=a[10], out=c10);
+    Not(in=b[10], out=d10);
+    Nand(a=c10, b=d10, out=out[10]);
+    Not(in=a[11], out=c11);
+    Not(in=b[11], out=d11);
+    Nand(a=c11, b=d11, out=out[11]);
+    Not(in=a[12], out=c12);
+    Not(in=b[12], out=d12);
+    Nand(a=c12, b=d12, out=out[12]);
+    Not(in=a[13], out=c13);
+    Not(in=b[13], out=d13);
+    Nand(a=c13, b=d13, out=out[13]);
+    Not(in=a[14], out=c14);
+    Not(in=b[14], out=d14);
+    Nand(a=c14, b=d14, out=out[14]);
+    Not(in=a[15], out=c15);
+    Not(in=b[15], out=d15);
+    Nand(a=c15, b=d15, out=out[15]);
+    
+}

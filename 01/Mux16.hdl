@@ -1,0 +1,67 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/01/Mux16.hdl
+
+/**
+ * 16-bit multiplexor: 
+ * for i = 0..15 out[i] = a[i] if sel == 0 
+ *                        b[i] if sel == 1
+ */
+
+CHIP Mux16 {
+    IN a[16], b[16], sel;
+    OUT out[16];
+
+    PARTS:
+    Not(in=sel, out=nots);
+    And(a=nots, b=a[0], out=c10);
+    And(a=sel, b=b[0], out=c20);
+    Or(a=c10, b=c20, out=out[0]);
+    And(a=nots, b=a[1], out=c11);
+    And(a=sel, b=b[1], out=c21);
+    Or(a=c11, b=c21, out=out[1]);
+    And(a=nots, b=a[2], out=c12);
+    And(a=sel, b=b[2], out=c22);
+    Or(a=c12, b=c22, out=out[2]);
+    And(a=nots, b=a[3], out=c13);
+    And(a=sel, b=b[3], out=c23);
+    Or(a=c13, b=c23, out=out[3]);
+    And(a=nots, b=a[4], out=c14);
+    And(a=sel, b=b[4], out=c24);
+    Or(a=c14, b=c24, out=out[4]);
+    And(a=nots, b=a[5], out=c15);
+    And(a=sel, b=b[5], out=c25);
+    Or(a=c15, b=c25, out=out[5]);
+    And(a=nots, b=a[6], out=c16);
+    And(a=sel, b=b[6], out=c26);
+    Or(a=c16, b=c26, out=out[6]);
+    And(a=nots, b=a[7], out=c17);
+    And(a=sel, b=b[7], out=c27);
+    Or(a=c17, b=c27, out=out[7]);
+    And(a=nots, b=a[8], out=c18);
+    And(a=sel, b=b[8], out=c28);
+    Or(a=c18, b=c28, out=out[8]);
+    And(a=nots, b=a[9], out=c19);
+    And(a=sel, b=b[9], out=c29);
+    Or(a=c19, b=c29, out=out[9]);
+    And(a=nots, b=a[10], out=c100);
+    And(a=sel, b=b[10], out=c200);
+    Or(a=c100, b=c200, out=out[10]);
+    And(a=nots, b=a[11], out=c101);
+    And(a=sel, b=b[11], out=c201);
+    Or(a=c101, b=c201, out=out[11]);
+    And(a=nots, b=a[12], out=c102);
+    And(a=sel, b=b[12], out=c202);
+    Or(a=c102, b=c202, out=out[12]);
+    And(a=nots, b=a[13], out=c103);
+    And(a=sel, b=b[13], out=c203);
+    Or(a=c103, b=c203, out=out[13]);
+    And(a=nots, b=a[14], out=c104);
+    And(a=sel, b=b[14], out=c204);
+    Or(a=c104, b=c204, out=out[14]);
+    And(a=nots, b=a[15], out=c105);
+    And(a=sel, b=b[15], out=c205);
+    Or(a=c105, b=c205, out=out[15]);
+
+}

@@ -1,0 +1,11 @@
+/*READ ME--------------------------------------------------------------
+
+This is my submission for project 6 (Assembler) in JAVA.
+To run, simple copy the .asm files from the 06 folders into the main folder 
+where the .java files are. Then run the code:
+ 
+>javac *.java
+>java Assembler Pong
+>Done (This outputs the .hack file)
+
+The process should run quickly and output a .hack file. 
