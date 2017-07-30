@@ -5,7 +5,7 @@ To run, simple copy the .asm files from the 06 folders into the main folder
 where the .java files are. Then run the code:
  
 >javac *.java
->java Assembler Pong
+>java Assembler Pong.asm
 >Done (This outputs the .hack file)
 
 The process should run quickly and output a .hack file. 
